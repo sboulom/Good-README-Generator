@@ -19,14 +19,14 @@ function promptUser() {
         name: "email"
       }
     ])
-    .then(function(input) {
+    .then(function (input) {
       axios
         .get("https://api.github.com/users/" + input.userName)
-        .then(function(response) {
-          console.log(response.data);
+        .then(function (response) {
+          // console.log(response.data);
 
           profileObj.avatar_url = response.data.avatar_url;
-          profileObj.email = response.data.email;
+          profileObj.email = input.email;
           inquirer
             .prompt([
               {
@@ -52,12 +52,12 @@ function promptUser() {
               {
                 type: "input",
                 message: "Usage",
-                name: "Usage"
+                name: "usage"
               },
               {
                 type: "input",
                 message: "License",
-                name: "licesne"
+                name: "license"
               },
               {
                 type: "input",
@@ -75,7 +75,7 @@ function promptUser() {
                 name: "questions"
               }
             ])
-            .then(function(input) {
+            .then(function (input) {
               profileObj.title = input.title;
               profileObj.description = input.description;
               profileObj.tableOfContent = input.tableOfContent;
@@ -86,12 +86,10 @@ function promptUser() {
               profileObj.tests = input.tests;
               profileObj.questions = input.questions;
               var readMeData = generateMarkdown(profileObj);
-              fs.writeFile("./README.md", readMeData, function(error) {});
+              fs.writeFile("./README.md", readMeData, function (error) { });
             });
         });
     });
 }
-promptUser();
-// The generated README includes the following sections:
 
-// The generated README includes 1 badge that's specific to the repository.
+promptUser();
