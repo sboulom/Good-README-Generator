@@ -2,25 +2,21 @@ function generateMarkdown(data) {
   return `
 <img src = '${data.avatar_url}'>
 
-${data.email}
+# ${data.email}
 
 ## ${data.title}
 
-# ${data.description}
+### ${data.description}
 
-# ${data.tableOfContent}
+- ${data.installation}
 
-# ${data.installation}
+- ${data.license}
 
-# ${data.usage}
+- ${data.contributing}
 
-# ${data.license}
+### ${data.tests}
 
-# ${data.contributing}
-
-# ${data.tests}
-
-# ${data.questions}
+### ${data.questions}
 `;
 }
 

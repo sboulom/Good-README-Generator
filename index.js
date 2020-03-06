@@ -36,37 +36,37 @@ function promptUser() {
               },
               {
                 type: "input",
-                message: "Describe your project",
+                message: "Give a short description of your project",
                 name: "description"
               },
-              {
-                type: "input",
-                message: "Table of Contents",
-                name: "tableOfContent"
-              },
+              // {
+              //   type: "input",
+              //   message: "Table of Contents",
+              //   name: "tableOfContent"
+              // },
               {
                 type: "input",
                 message: "What packages did you install?",
                 name: "installation"
               },
+              // {
+              //   type: "input",
+              //   message: "Usage",
+              //   name: "usage"
+              // },
               {
                 type: "input",
-                message: "Usage",
-                name: "usage"
-              },
-              {
-                type: "input",
-                message: "License",
+                message: "What kind of licesnse should your project have?",
                 name: "license"
               },
               {
                 type: "input",
-                message: "Contributing",
+                message: "What does the user need to know about using this repo?",
                 name: "contributing"
               },
               {
                 type: "input",
-                message: "Tests",
+                message: "What command should you run to run tests?",
                 name: "tests"
               },
               {
@@ -78,9 +78,9 @@ function promptUser() {
             .then(function (input) {
               profileObj.title = input.title;
               profileObj.description = input.description;
-              profileObj.tableOfContent = input.tableOfContent;
+              // profileObj.tableOfContent = input.tableOfContent;
               profileObj.installation = input.installation;
-              profileObj.usage = input.usage;
+              // profileObj.usage = input.usage;
               profileObj.license = input.license;
               profileObj.contributing = input.contributing;
               profileObj.tests = input.tests;

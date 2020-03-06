@@ -1,22 +1,18 @@
 
 <img src = 'https://avatars2.githubusercontent.com/u/57572182?v=4'>
 
-sboulom@gmail.commmmmmmm
+# sboulom@gmail.com
 
-## 1
+## Good ReadME
 
-# 2
+### generates readme for projects
 
-# 3
+- inquirer, axios and fs
 
-# 4
+- MIT
 
-# 5
+- contributing
 
-# 6
+### npm test
 
-# 7
-
-# 8
-
-# 9
+### none
